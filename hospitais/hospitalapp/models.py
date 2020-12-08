@@ -5,8 +5,8 @@ from PIL import Image
 class Hospital(models.Model):
     """Repseenta a entidade hospital"""
     nome_hospital = models.CharField(max_length=200)
-    foto = models.ImageField(null=True, blank=True)
-    desc_hospital = models.TextField
+    foto = models.ImageField(upload_to='img', null=True, blank=True)
+    desc_hospital = models.TextField(null=True, max_length=500)
     tipo_hospital = models.CharField(max_length=200)
     conceito_hospital = models.CharField(max_length=200)
 
